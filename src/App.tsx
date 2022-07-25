@@ -1,8 +1,7 @@
-import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FormikExam from "./components/FormikExam";
 import Header from "./components/Header";
-import ProseMirror from "./components/ProseMirror";
+import Editor from "./components/edit/Edit";
 import UseFormikExam from "./components/UseFormikExam";
 
 function App() {
@@ -11,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="prose-mirror" element={<ProseMirror />} />
+          <Route path="prose-mirror" element={<Editor />} />
           <Route path="formik" element={<FormikExam />} />
           <Route path="useFormik" element={<UseFormikExam />} />
         </Routes>
