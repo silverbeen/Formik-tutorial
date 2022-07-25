@@ -84,3 +84,4 @@ const View = styled.pre`
 `;
 
 export default Editor;
+  
