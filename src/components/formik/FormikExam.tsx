@@ -1,11 +1,4 @@
-import {
-  Formik,
-  FormikHelpers,
-  FormikProps,
-  Form,
-  Field,
-  FieldProps,
-} from "formik";
+import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
 interface InitType {
@@ -19,7 +12,7 @@ const FormikExam = () => {
   const test = Yup.object({
     firstName: Yup.string().min(4, "4글자 이상 입력해주세요").required(),
     lastName: Yup.string().min(4, "4글자 이상 입력해주세요").required(),
-    //   email: Yup.string().email("이메일 형식을 맞춰주세요").required(),
+    email: Yup.string().email("이메일 형식을 맞춰주세요").required(),
   });
   return (
     <div>
@@ -35,8 +28,7 @@ const FormikExam = () => {
           style={{ display: "flex", flexDirection: "column", width: "300px" }}
         >
           <label htmlFor="firstName">First Name</label>
-          <Field id="firstName" name="firstName" placeholder="First Name"  />
-
+          <Field id="firstName" name="firstName" placeholder="First Name" />
           <Field id="secName" name="secName" placeholder="sec Name" />
           <button type="submit">Submit</button>
         </Form>
