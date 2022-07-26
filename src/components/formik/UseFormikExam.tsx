@@ -1,14 +1,6 @@
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import styled from "styled-components";
-<<<<<<< Updated upstream:src/components/formik/UseFormikExam.tsx
-<<<<<<< Updated upstream:src/components/formik/UseFormikExam.tsx
-=======
-import { useEffect, useState } from "react";
->>>>>>> Stashed changes:src/components/UseFormikExam.tsx
-=======
-import { useEffect, useState } from "react";
->>>>>>> Stashed changes:src/components/UseFormikExam.tsx
 
 const UseFormikExam = () => {
   const formik = useFormik({
