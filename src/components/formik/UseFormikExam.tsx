@@ -1,11 +1,8 @@
-import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useFormik } from "formik";
 import styled from "styled-components";
-import { useState } from "react";
 
 const UseFormikExam = () => {
-  const [isButton, setIsButton] = useState<boolean>(false);
-
   const formik = useFormik({
     initialValues: {
       firstName: "",
