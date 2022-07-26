@@ -6,6 +6,7 @@ const Header = () => {
     <Container>
       <Link to="prose-mirror">prose-mirror</Link>
       <Link to="formik">formik</Link>
+      <Link to="formik2">formik2</Link>
       <Link to="useFormik">useFormik</Link>
       <Link to="useField">useField</Link>
     </Container>
