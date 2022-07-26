@@ -4,18 +4,11 @@ export const YUP_SCHEMA = {
   REQUIRED: Yup.string().required(),
   NOT_REQUIRED: Yup.string().notRequired(),
   USER_NAME: Yup.string()
-    .matches(/^[A-Za-z0-9]*$/, {
-      message: "profile.username_format_validation_message",
-    })
-    .min(6, "register.userinfo_username_format_validation_message")
-    .max(25, "register.userinfo_username_format_validation_message")
+    .min(2, "2글자 이상 입력해주세요")
+    .max(10, "10글자 이하로 입력해주세요")
     .required(),
-  PASSWORD: Yup.string()
-    .matches(/^[a-zA-Z\d]{8,25}$/, {
-      message: "login.userinfo_password_format_validation_message",
-    })
-    .required(),
-
+  PASSWORD: Yup.string().required(),
+  CHECK_BOX: Yup.array().min(1, "최소 한개의 필드를 선택해주세요").required(),
   EMAIL: Yup.string().email().required(),
 };
 
