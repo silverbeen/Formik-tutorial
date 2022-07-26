@@ -1,6 +1,10 @@
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import styled from "styled-components";
+<<<<<<< Updated upstream:src/components/formik/UseFormikExam.tsx
+=======
+import { useEffect, useState } from "react";
+>>>>>>> Stashed changes:src/components/UseFormikExam.tsx
 
 const UseFormikExam = () => {
   const formik = useFormik({
@@ -12,7 +16,7 @@ const UseFormikExam = () => {
     validationSchema: Yup.object({
       firstName: Yup.string().min(4, "4글자 이상 입력해주세요").required(),
       lastName: Yup.string().min(4, "4글자 이상 입력해주세요").required(),
-      //   email: Yup.string().email("이메일 형식을 맞춰주세요").required(),
+      email: Yup.string().email("이메일 형식을 맞춰주세요").required(),
     }),
     initialTouched: { firstName: true },
     onSubmit: (values) => {
@@ -59,12 +63,8 @@ const UseFormikExam = () => {
         <input
           type="email"
           id="email"
-          //   name="email"
-          //   onChange={formik.handleChange}
-          //   value={formik.values.email}
           placeholder="email"
-          required
-          //   {...formik.getFieldProps("email")}
+          {...formik.getFieldProps("email")}
         ></input>
         {/* 유효성 메세지 */}
         {formik.touched.email && formik.errors.email ? (
