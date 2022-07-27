@@ -5,6 +5,7 @@ import Editor from "./components/edit/Edit";
 import UseFormikExam from "./components/formik/UseFormikExam";
 import UseFieldExam from "./components/formik/UseFieldExam";
 import FormikExam2 from "./components/formik/FormikFieldExam";
+import BeautifulDnd from "./components/dnd";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="formik2" element={<FormikExam2 />} />
           <Route path="useFormik" element={<UseFormikExam />} />
           <Route path="useField" element={<UseFieldExam />} />
+          <Route path="dnd" element={<BeautifulDnd />} />
         </Routes>
       </BrowserRouter>
     </>
