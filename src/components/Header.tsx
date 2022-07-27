@@ -9,6 +9,7 @@ const Header = () => {
       <Link to="formik2">formik2</Link>
       <Link to="useFormik">useFormik</Link>
       <Link to="useField">useField</Link>
+      <Link to="dnd">dnd</Link>
     </Container>
   );
 };
