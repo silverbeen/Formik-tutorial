@@ -7,6 +7,7 @@ import {
   DropResult,
 } from "react-beautiful-dnd";
 import { todos } from "../../constants/todos";
+import ItemCard from "./ItemCard";
 
 const BeautifulDnd = () => {
   const [todoList, setTodoList] = useState(todos);
@@ -31,95 +32,53 @@ const BeautifulDnd = () => {
 
   return (
     <Container>
-      <h2>Finn</h2>
-      <DragDropContext onDragEnd={onDragEnd}>
-        <Droppable droppableId="todos">
-          {(provided) => (
-            <div
-              className="todos"
-              {...provided.droppableProps}
-              ref={provided.innerRef}
-            >
-              {todoList.map((todo, index) => (
-                <Draggable key={todo.id} draggableId={todo.id} index={index}>
-                  {(provided) => (
-                    <li
-                      ref={provided.innerRef}
-                      {...provided.dragHandleProps}
-                      {...provided.draggableProps}
-                    >
-                      <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxfGSq7nqjFfrhkWMDHlbw-VQSjh6zPSW49coL_xtywk89tpwGxpjD21FSdddo9Re-W3Q&usqp=CAU"
-                        alt=""
-                      />
-                      <div className="text_box">
-                        <div>
-                          <strong>{index + 1} </strong>
-                          <span>{todo.title}</span>
-                        </div>
-                        <button>끝끝끝</button>
+      <Wrapper>
+        <DragDropContext onDragEnd={onDragEnd}>
+          <h2>Finn</h2>
+          <Droppable droppableId="finn">
+            {(provided) => (
+              <div
+                className="finn"
+                {...provided.droppableProps}
+                ref={provided.innerRef}
+              >
+                {todoList.map((todo, index) => (
+                  <Draggable key={todo.id} draggableId={todo.id} index={index}>
+                    {(provided) => (
+                      <div
+                        ref={provided.innerRef}
+                        {...provided.dragHandleProps}
+                        {...provided.draggableProps}
+                      >
+                        <ItemCard num={index} content={todo.title} />
                       </div>
-                    </li>
-                  )}
-                </Draggable>
-              ))}
-              {provided.placeholder}
-            </div>
-          )}
-        </Droppable>
-      </DragDropContext>
+                    )}
+                  </Draggable>
+                ))}
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+        </DragDropContext>
+      </Wrapper>
     </Container>
   );
 };
 
 export const Container = styled.div`
-  width: 300px;
   margin: 100px auto;
-  background-color: #ffeeee;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+`;
+
+const Wrapper = styled.div`
+  width: 500px;
+  background-color: #efefef;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #282828;
-
-  & li {
-    margin: 20px 0;
-    list-style: none;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background-color: #ffffff;
-    user-select: none;
-    display: flex;
-    gap: 20px;
-
-    :hover,
-    :active {
-      background-color: #f9c2c2;
-      transition: all 0.3s;
-    }
-
-    & img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .text_box {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-
-      button {
-        border: none;
-        background-color: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        float: right;
-        cursor: pointer;
-      }
-    }
-  }
 `;
 
 export default BeautifulDnd;
