@@ -2,8 +2,8 @@ import * as Yup from "yup";
 import styled from "styled-components";
 import { Form, Formik, Field } from "formik";
 import { TextField, Button, Checkbox } from "@material-ui/core";
-import LabeledRadio from "./lebel/LabeledRadio";
-import LabeledCheckbox from "./lebel/LabeledCheckbox";
+import LabeledRadio from "./label/LabeledRadio";
+import LabeledCheckbox from "./label/LabeledCheckbox";
 import YUP_SCHEMA from "../../constants/yupSchema";
 
 const FormikFieldExam = () => {
