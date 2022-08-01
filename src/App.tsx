@@ -6,10 +6,24 @@ import UseFormikExam from "./components/formik/UseFormikExam";
 import UseFieldExam from "./components/formik/UseFieldExam";
 import FormikExam2 from "./components/formik/FormikFieldExam";
 import BeautifulDnd from "./components/dnd";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCount((c) => c + 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(id);
+    };
+  }, []);
+
   return (
     <>
+      {count}
       <BrowserRouter>
         <Header />
         <Routes>
