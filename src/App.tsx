@@ -7,6 +7,7 @@ import UseFieldExam from "./components/formik/UseFieldExam";
 import FormikExam2 from "./components/formik/FormikFieldExam";
 import BeautifulDnd from "./components/dnd";
 import { useEffect, useState } from "react";
+import { PATH } from "./constants/paths";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,12 +28,12 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="prose-mirror" element={<Editor />} />
-          <Route path="formik" element={<FormikExam />} />
-          <Route path="formik2" element={<FormikExam2 />} />
-          <Route path="useFormik" element={<UseFormikExam />} />
-          <Route path="useField" element={<UseFieldExam />} />
-          <Route path="dnd" element={<BeautifulDnd />} />
+          <Route path={PATH.REMIRROR} element={<Editor />} />
+          <Route path={PATH.FORMIK} element={<FormikExam />} />
+          <Route path={PATH.FORMIK2} element={<FormikExam2 />} />
+          <Route path={PATH.USEFORMIK} element={<UseFormikExam />} />
+          <Route path={PATH.USEFIELD} element={<UseFieldExam />} />
+          <Route path={PATH.DND} element={<BeautifulDnd />} />
         </Routes>
       </BrowserRouter>
     </>
