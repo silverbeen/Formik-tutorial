@@ -7,6 +7,7 @@ import {
   DropResult,
 } from "react-beautiful-dnd";
 import { todos } from "../../constants/todos";
+import CharacterList from "./CharacterList";
 import ItemCard from "./ItemCard";
 
 const BeautifulDnd = () => {
@@ -32,6 +33,7 @@ const BeautifulDnd = () => {
 
   return (
     <Container>
+      <CharacterList />
       <Wrapper>
         <DragDropContext onDragEnd={onDragEnd}>
           <h2>Finn</h2>
@@ -69,7 +71,7 @@ export const Container = styled.div`
   margin: 100px auto;
   width: 50%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 100px;
 `;
 
