@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FormikExam from "./components/formik/FormikExam";
 import Header from "./components/Header";
@@ -6,8 +7,8 @@ import UseFormikExam from "./components/formik/UseFormikExam";
 import UseFieldExam from "./components/formik/UseFieldExam";
 import FormikExam2 from "./components/formik/FormikFieldExam";
 import BeautifulDnd from "./components/dnd";
-import { useEffect, useState } from "react";
 import { PATH } from "./constants/paths";
+import "keen-slider/keen-slider.min.css";
 
 function App() {
   const [count, setCount] = useState(0);
