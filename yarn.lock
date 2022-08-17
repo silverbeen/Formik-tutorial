@@ -8634,6 +8634,7 @@ __metadata:
     eslint-config-airbnb: ^19.0.4
     formik: ^2.2.9
     gh-pages: ^4.0.0
+    keen-slider: ^6.7.0
     react: ^18.2.0
     react-beautiful-dnd: ^13.1.0
     react-dom: ^18.2.0
@@ -10855,6 +10856,13 @@ __metadata:
   dependencies:
     csstype: ^3.0.3
   checksum: 35a9a69c385d4a23f8f146a38ce78a3d5a004ca5cb4fde41fae947b7936e903922244dc8faedbf661309bf1b6d68b18f84570436e6258e04229fdac71d70d77f
+  languageName: node
+  linkType: hard
+
+"keen-slider@npm:^6.7.0":
+  version: 6.7.0
+  resolution: "keen-slider@npm:6.7.0"
+  checksum: de511c6b23790882a8092325b159d014da5d13554d038bd67f8e9f223cd4cb73aaf994773b635dd4d7c4c5e2d44316abfab270b92c9ce8a87b6047809fbe1c31
   languageName: node
   linkType: hard
 
