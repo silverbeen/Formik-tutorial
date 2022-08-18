@@ -84,7 +84,7 @@ const CharacterList = () => {
           <div ref={sliderRef}>
             <Droppable droppableId="charater" direction="horizontal">
               {(provided, snapshot) => (
-                <div
+                         <div
                   className="charater"
                   {...provided.droppableProps}
                   ref={provided.innerRef}
