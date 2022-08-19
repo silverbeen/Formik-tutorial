@@ -6,4 +6,5 @@ export const PATH = {
   FORMIK2: "/formik2",
   USEFORMIK: "/useFormik",
   USEFIELD: "/useField",
+  STREAM: "/stream",
 };
