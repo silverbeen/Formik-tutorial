@@ -9,6 +9,7 @@ import FormikExam2 from "./components/formik/FormikFieldExam";
 import BeautifulDnd from "./components/dnd";
 import { PATH } from "./constants/paths";
 import "keen-slider/keen-slider.min.css";
+import StreamChatting from "./components/stream";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -35,6 +36,7 @@ function App() {
           <Route path={PATH.USEFORMIK} element={<UseFormikExam />} />
           <Route path={PATH.USEFIELD} element={<UseFieldExam />} />
           <Route path={PATH.DND} element={<BeautifulDnd />} />
+          <Route path={PATH.STREAM} element={<StreamChatting />} />
         </Routes>
       </BrowserRouter>
     </>
