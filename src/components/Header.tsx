@@ -10,6 +10,7 @@ const Header = () => {
       <Link to="useFormik">useFormik</Link>
       <Link to="useField">useField</Link>
       <Link to="dnd">dnd</Link>
+      <Link to="stream">stream</Link>
     </Container>
   );
 };
