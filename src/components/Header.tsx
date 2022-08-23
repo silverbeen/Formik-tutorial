@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Header = () => {
   return (
     <Container>
-      <Link to="prose-mirror">prose-mirror</Link>
+      <Link to="remirror">prose-mirror</Link>
       <Link to="formik">formik</Link>
       <Link to="formik2">formik2</Link>
       <Link to="useFormik">useFormik</Link>
