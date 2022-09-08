@@ -7,4 +7,5 @@ export const PATH = {
   USEFORMIK: "/useFormik",
   USEFIELD: "/useField",
   STREAM: "/stream",
+  TIPTAP: "/tiptap",
 };
