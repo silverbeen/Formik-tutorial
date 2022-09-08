@@ -11,6 +11,7 @@ const Header = () => {
       <Link to="useField">useField</Link>
       <Link to="dnd">dnd</Link>
       <Link to="stream">stream</Link>
+      <Link to="tiptap">TipTap</Link>
     </Container>
   );
 };
